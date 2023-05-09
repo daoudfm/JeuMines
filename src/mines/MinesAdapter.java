@@ -34,17 +34,17 @@ class MinesAdapter extends MouseAdapter {
                     rep = true;
 
                     if (this.board.field[(cRow * this.board.cols) + cCol] <= Board.COVERED_MINE_CELL) {
-                        if (this.board.mines_left > 0) {
+                        if (this.board.minesLeft > 0) {
                         	this.board.field[(cRow * this.board.cols) + cCol] += Board.MARK_FOR_CELL;
-                        	this.board.mines_left--;
-                        	this.board.statusbar.setText(Integer.toString(this.board.mines_left));
+                        	this.board.minesLeft--;
+                        	this.board.statusbar.setText(Integer.toString(this.board.minesLeft));
                         } else
                         	this.board.statusbar.setText("No marks left");
                     } else {
 
                     	this.board.field[(cRow * this.board.cols) + cCol] -= Board.MARK_FOR_CELL;
-                    	this.board.mines_left++;
-                    	this.board.statusbar.setText(Integer.toString(this.board.mines_left));
+                    	this.board.minesLeft++;
+                    	this.board.statusbar.setText(Integer.toString(this.board.minesLeft));
                     }
                 }
 
@@ -62,7 +62,7 @@ class MinesAdapter extends MouseAdapter {
                     if (this.board.field[(cRow * this.board.cols) + cCol] == Board.MINE_CELL)
                     	this.board.inGame = false;
                     if (this.board.field[(cRow * this.board.cols) + cCol] == Board.EMPTY_CELL)
-                    	this.board.find_empty_cells((cRow * this.board.cols) + cCol);
+                    	this.board.findEmptyCells((cRow * this.board.cols) + cCol);
                 }
             }
 
