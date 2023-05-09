@@ -4,7 +4,14 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 class MinesAdapter extends MouseAdapter {
-    public void mousePressed(MouseEvent e) {
+	
+	private Board board;
+	
+    public MinesAdapter(Board b) {
+		this.board = b ;
+	}
+
+	public void mousePressed(MouseEvent e) {
 
         int x = e.getX();
         int y = e.getY();
