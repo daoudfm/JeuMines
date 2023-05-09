@@ -2,7 +2,7 @@ package mines;
 
 import java.awt.Graphics;
 import java.awt.Image;
-import java.util.Random;
+import java.security.SecureRandom;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -26,7 +26,7 @@ public class Board extends JPanel {
 	protected static final int DRAW_COVER = 10;
 	protected static final int DRAW_MARK = 11;
 	protected static final int DRAW_WRONG_MARK = 12;
-	private Random random = new Random();
+	private SecureRandom random = new SecureRandom();
 	protected int[] field;
 	protected boolean inGame;
 	protected int minesLeft;

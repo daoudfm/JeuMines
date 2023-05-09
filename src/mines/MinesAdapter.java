@@ -10,6 +10,7 @@ class MinesAdapter extends MouseAdapter {
     public MinesAdapter(Board b) {
 		this.board = b ;
 	}
+    
     @Override
 	public void mousePressed(MouseEvent e) {
 
