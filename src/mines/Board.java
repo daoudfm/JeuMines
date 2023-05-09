@@ -37,7 +37,6 @@ public class Board extends JPanel {
 	protected int allCells;
 	protected JLabel statusbar;
 
-
     public Board(JLabel statusbar) {
 
         this.statusbar = statusbar;
@@ -56,11 +55,10 @@ public class Board extends JPanel {
         newGame();
     }
 
-
     public void newGame() {
 
-        int current_col;
-
+        int currentCol;
+        
         int i = 0;
         int position = 0;
         int cell = 0;
@@ -76,7 +74,6 @@ public class Board extends JPanel {
 
         statusbar.setText(Integer.toString(minesLeft));
 
-
         i = 0;
         while (i < mines) {
         	position = random.nextInt(0,256);
@@ -84,12 +81,11 @@ public class Board extends JPanel {
             if ((position < allCells) &&
                 (field[position] != COVERED_MINE_CELL)) {
 
-
-                current_col = position % cols;
+                currentCol = position % cols;
                 field[position] = COVERED_MINE_CELL;
                 i++;
 
-                if (current_col > 0) { 
+                if (currentCol > 0) { 
                     cell = position - 1 - cols;
                     if ((cell >= 0) && (field[cell] != COVERED_MINE_CELL))
                             field[cell] += 1;
@@ -109,7 +105,7 @@ public class Board extends JPanel {
                 if ((cell < allCells) && (field[cell] != COVERED_MINE_CELL))
                         field[cell] += 1;
 
-                if (current_col < (cols - 1)) {
+                if (currentCol < (cols - 1)) {
                     cell = position - cols + 1;
                     if ((cell >= 0) && (field[cell] != COVERED_MINE_CELL))
                             field[cell] += 1;
