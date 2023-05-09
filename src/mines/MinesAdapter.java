@@ -21,12 +21,10 @@ class MinesAdapter extends MouseAdapter {
 
         boolean rep = false;
 
-
         if (!this.board.inGame) {
         	this.board.newGame();
         	this.board.repaint();
         }
-
 
         if ((x < this.board.cols * Board.CELL_SIZE) && (y < this.board.rows * Board.CELL_SIZE)) {
 
