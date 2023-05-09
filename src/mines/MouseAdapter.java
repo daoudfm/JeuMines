@@ -16,8 +16,8 @@ class MinesAdapter extends MouseAdapter {
         int x = e.getX();
         int y = e.getY();
 
-        int cCol = x / CELL_SIZE;
-        int cRow = y / CELL_SIZE;
+        int cCol = x / Board.CELL_SIZE;
+        int cRow = y / Board.CELL_SIZE;
 
         boolean rep = false;
 
