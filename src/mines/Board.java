@@ -91,41 +91,33 @@ public class Board extends JPanel {
 
                 if (current_col > 0) { 
                     cell = position - 1 - cols;
-                    if (cell >= 0)
-                        if (field[cell] != COVERED_MINE_CELL)
+                    if ((cell >= 0) && (field[cell] != COVERED_MINE_CELL))
                             field[cell] += 1;
                     cell = position - 1;
-                    if (cell >= 0)
-                        if (field[cell] != COVERED_MINE_CELL)
+                    if ((cell >= 0) && (field[cell] != COVERED_MINE_CELL))
                             field[cell] += 1;
 
                     cell = position + cols - 1;
-                    if (cell < allCells)
-                        if (field[cell] != COVERED_MINE_CELL)
+                    if ((cell < allCells) && (field[cell] != COVERED_MINE_CELL))
                             field[cell] += 1;
                 }
 
                 cell = position - cols;
-                if (cell >= 0)
-                    if (field[cell] != COVERED_MINE_CELL)
+                if ((cell >= 0) && (field[cell] != COVERED_MINE_CELL))
                         field[cell] += 1;
                 cell = position + cols;
-                if (cell < allCells)
-                    if (field[cell] != COVERED_MINE_CELL)
+                if (cell < allCells) if (field[cell] != COVERED_MINE_CELL)
                         field[cell] += 1;
 
                 if (current_col < (cols - 1)) {
                     cell = position - cols + 1;
-                    if (cell >= 0)
-                        if (field[cell] != COVERED_MINE_CELL)
+                    if ((cell >= 0) && (field[cell] != COVERED_MINE_CELL))
                             field[cell] += 1;
                     cell = position + cols + 1;
-                    if (cell < allCells)
-                        if (field[cell] != COVERED_MINE_CELL)
+                    if ((cell < allCells) && (field[cell] != COVERED_MINE_CELL))
                             field[cell] += 1;
                     cell = position + 1;
-                    if (cell < allCells)
-                        if (field[cell] != COVERED_MINE_CELL)
+                    if ((cell < allCells) && (field[cell] != COVERED_MINE_CELL))
                             field[cell] += 1;
                 }
             }
