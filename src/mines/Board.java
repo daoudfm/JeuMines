@@ -26,7 +26,7 @@ public class Board extends JPanel {
 	protected static final int DRAW_COVER = 10;
 	protected static final int DRAW_MARK = 11;
 	protected static final int DRAW_WRONG_MARK = 12;
-
+	private Random random = new Random();
 	protected int[] field;
 	protected boolean inGame;
 	protected int minesLeft;
@@ -59,14 +59,12 @@ public class Board extends JPanel {
 
     public void newGame() {
 
-        Random random;
         int current_col;
 
         int i = 0;
         int position = 0;
         int cell = 0;
 
-        random = new Random();
         inGame = true;
         minesLeft = mines;
 
