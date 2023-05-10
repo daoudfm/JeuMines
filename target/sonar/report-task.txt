@@ -1,6 +1,6 @@
-projectKey=MiniProjetTml
+projectKey=JeuMines
 serverUrl=http://localhost:9000
 serverVersion=9.9.0.65466
-dashboardUrl=http://localhost:9000/dashboard?id=MiniProjetTml
-ceTaskId=AYgCvK5u6vdT67tyfPar
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AYgCvK5u6vdT67tyfPar
+dashboardUrl=http://localhost:9000/dashboard?id=JeuMines
+ceTaskId=AYgFAAB_dWitXpfee-Es
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYgFAAB_dWitXpfee-Es

@@ -128,24 +128,21 @@ public class Board extends JPanel {
 
         if (currentCol > 0) { 
             cell = j - cols - 1;
-            if (cell >= 0)
-                if (field[cell] > MINE_CELL) {
+            if ((cell >= 0) && (field[cell] > MINE_CELL)) {
                     field[cell] -= COVER_FOR_CELL;
                     if (field[cell] == EMPTY_CELL)
                         findEmptyCells(cell);
                 }
 
             cell = j - 1;
-            if (cell >= 0)
-                if (field[cell] > MINE_CELL) {
+            if ((cell >= 0) && (field[cell] > MINE_CELL)) {
                     field[cell] -= COVER_FOR_CELL;
                     if (field[cell] == EMPTY_CELL)
                         findEmptyCells(cell);
                 }
 
             cell = j + cols - 1;
-            if (cell < allCells)
-                if (field[cell] > MINE_CELL) {
+            if ((cell < allCells) && (field[cell] > MINE_CELL)) {
                     field[cell] -= COVER_FOR_CELL;
                     if (field[cell] == EMPTY_CELL)
                         findEmptyCells(cell);
@@ -153,16 +150,14 @@ public class Board extends JPanel {
         }
 
         cell = j - cols;
-        if (cell >= 0)
-            if (field[cell] > MINE_CELL) {
+        if ((cell >= 0) && (field[cell] > MINE_CELL)) {
                 field[cell] -= COVER_FOR_CELL;
                 if (field[cell] == EMPTY_CELL)
                     findEmptyCells(cell);
             }
 
         cell = j + cols;
-        if (cell < allCells)
-            if (field[cell] > MINE_CELL) {
+        if ((cell < allCells) && (field[cell] > MINE_CELL)) {
                 field[cell] -= COVER_FOR_CELL;
                 if (field[cell] == EMPTY_CELL)
                     findEmptyCells(cell);
@@ -170,24 +165,21 @@ public class Board extends JPanel {
 
         if (currentCol < (cols - 1)) {
             cell = j - cols + 1;
-            if (cell >= 0)
-                if (field[cell] > MINE_CELL) {
+            if ((cell >= 0) && (field[cell] > MINE_CELL)) {
                     field[cell] -= COVER_FOR_CELL;
                     if (field[cell] == EMPTY_CELL)
                         findEmptyCells(cell);
                 }
 
             cell = j + cols + 1;
-            if (cell < allCells)
-                if (field[cell] > MINE_CELL) {
+            if ((cell < allCells) && (field[cell] > MINE_CELL)) {
                     field[cell] -= COVER_FOR_CELL;
                     if (field[cell] == EMPTY_CELL)
                         findEmptyCells(cell);
                 }
 
             cell = j + 1;
-            if (cell < allCells)
-                if (field[cell] > MINE_CELL) {
+            if ((cell < allCells) && (field[cell] > MINE_CELL)) {
                     field[cell] -= COVER_FOR_CELL;
                     if (field[cell] == EMPTY_CELL)
                         findEmptyCells(cell);
